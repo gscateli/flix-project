@@ -63,6 +63,3 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     ```
     sfdx force:org:open -u mydevorg
     ```
-
-1. In App Launcher, select the **Apex Recipes** app.
-    - If the app does not load, please double check that the **Apex Recipes** permission set active on your user.
