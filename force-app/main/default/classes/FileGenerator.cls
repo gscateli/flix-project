@@ -2,10 +2,10 @@ public with sharing class FileGenerator {
 
     public static Boolean generateFile(String fileContent, String fileTitle, String fileExtension, String recordId) {
         try {
-            String pdfContent = fileContent; // pass as parameter
+            String pdfContent = fileContent; 
             ContentVersion cVersion = new ContentVersion();
             cVersion.ContentLocation = 'S';
-            cVersion.Title = fileTitle; //pass as parameter the contract number 
+            cVersion.Title = fileTitle; 
             cVersion.PathOnClient = cVersion.Title + '.' + fileExtension;
             cVersion.VersionData = Blob.toPdf(pdfcontent);
     
@@ -19,7 +19,7 @@ public with sharing class FileGenerator {
     
             ContentDocumentLink cDocLink = new ContentDocumentLink();
             cDocLink.ContentDocumentId = conDocument;
-            cDocLink.LinkedEntityId = recordId; //pass the contract id as a parameter
+            cDocLink.LinkedEntityId = recordId; 
             cDocLink.Visibility = 'AllUsers';
             cDocLink.ShareType = 'V';
     
