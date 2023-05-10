@@ -1,18 +1,68 @@
-# Salesforce DX Project: Next Steps
+# Salesforce Flix Project
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-## How Do You Plan to Deploy Your Changes?
+## Installing the App using a Developer Edition Org or a Trailhead Playground via the Salesforce CLI
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+Follow this set of instructions if you want to deploy the app to a more permanent environment than a Scratch org.
+This includes non source-tracked orgs such as a [free Developer Edition Org](https://developer.salesforce.com/signup) or a [Trailhead Playground](https://trailhead.salesforce.com/).
 
-## Configure Your Salesforce DX Project
+Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+1. Clone this repository:
 
-## Read All About It
+    ```
+    git clone https://github.com/gscateli/flix-project.git
+    cd flix-project
+    ```
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+1. Authorize with your Trailhead Playground or Developer Edition org and provide it with an alias (**mydevorg** in the command below):
+
+    ```
+    sfdx auth:web:login -s -a mydevorg
+    ```
+
+1. If you are setting up a Developer Edition: go to **Setup**, under **Platform Cache**, and click the "Request Trial Capacity" button. [Request a Platform Cache Trial](https://help.salesforce.com/articleView?id=data_platform_cache_trial.htm&type=5)
+
+1. Run this command in a terminal to deploy the app.
+
+    ```
+    sfdx force:source:deploy -p force-app
+    ```
+
+1. Assign the `AccountContractDealers` permission set to the default user
+
+    ```
+    sfdx force:user:permset:assign -n AccountContractDealers
+    ```
+    or assign it to a specific user.
+
+    ```
+    sfdx force:user:permset:assign -n AccountContractDealers -o youruser@yourorg.com
+    ```
+
+1. Assign the `AccountContractSupervisors` permission set to the default user
+
+    ```
+    sfdx force:user:permset:assign -n AccountContractSupervisors
+    ```
+    
+    or assign it to a specific user.
+
+    ```
+    sfdx force:user:permset:assign -n AccountContractSupervisors -o youruser@yourorg.com
+    ```
+
+1. Import Sample Data
+
+    ```
+    sfdx force:data:import:tree -p ./data/data-plan.json
+    ```
+
+1. If your org isn't already open, open it now:
+
+    ```
+    sfdx force:org:open -u mydevorg
+    ```
+
+1. In App Launcher, select the **Apex Recipes** app.
+    - If the app does not load, please double check that the **Apex Recipes** permission set active on your user.
