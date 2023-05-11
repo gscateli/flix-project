@@ -1,10 +1,7 @@
 # Salesforce Flix Project
 
 
-## Installing the App using a Developer Edition Org or a Trailhead Playground via the Salesforce CLI
-
-Follow this set of instructions if you want to deploy the app to a more permanent environment than a Scratch org.
-This includes non source-tracked orgs such as a [free Developer Edition Org](https://developer.salesforce.com/signup) or a [Trailhead Playground](https://trailhead.salesforce.com/).
+## Installing the App using a Developer Edition Org, a Sandbox or a Trailhead Playground via the Salesforce CLI
 
 Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
 
@@ -21,8 +18,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     sfdx auth:web:login -s -a mydevorg
     ```
 
-1. If you are setting up a Developer Edition: go to **Setup**, under **Platform Cache**, and click the "Request Trial Capacity" button. [Request a Platform Cache Trial](https://help.salesforce.com/articleView?id=data_platform_cache_trial.htm&type=5)
-
 1. Run this command in a terminal to deploy the app.
 
     ```
@@ -34,7 +29,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     ```
     sfdx force:user:permset:assign -n AccountContractDealers
     ```
-    or assign it to a specific user.
+    or assign it to a specific user. (make sure your user has 'Flow Access' checked on user details)
 
     ```
     sfdx force:user:permset:assign -n AccountContractDealers -o youruser@yourorg.com
@@ -46,7 +41,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     sfdx force:user:permset:assign -n AccountContractSupervisors
     ```
     
-    or assign it to a specific user.
+    or assign it to a specific user. (make sure your user has 'Flow Access' checked on user details)
 
     ```
     sfdx force:user:permset:assign -n AccountContractSupervisors -o youruser@yourorg.com
