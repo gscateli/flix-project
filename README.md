@@ -29,7 +29,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     ```
     sfdx force:user:permset:assign -n AccountContractDealers
     ```
-    or assign it to a specific user. (make sure your user has 'Flow Access' checked on user details)
+    Optionally assign it to a specific user. (make sure your user has 'Flow Access' checked on user details)
 
     ```
     sfdx force:user:permset:assign -n AccountContractDealers -o youruser@yourorg.com
@@ -41,7 +41,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     sfdx force:user:permset:assign -n AccountContractSupervisors
     ```
     
-    or assign it to a specific user. (make sure your user has 'Flow Access' checked on user details)
+    Optionally assign it to a specific user. (make sure your user has 'Flow Access' checked on user details)
 
     ```
     sfdx force:user:permset:assign -n AccountContractSupervisors -o youruser@yourorg.com
