@@ -1,0 +1,40 @@
+{
+    "records": [
+        {
+            "name": "Clause 1",
+            "ClauseDescription__c": "This is Clause 1 description",
+            "Country__c": "USA",
+            "attributes": {"type": "AccountContractClause__c", "referenceId": "accContractClause1"}
+        },
+        {
+            "name": "Clause 2",
+            "ClauseDescription__c": "This is Clause 2 description",
+            "Country__c": "USA",
+            "attributes": {"type": "AccountContractClause__c", "referenceId": "accContractClause2"}
+        },
+        {
+            "name": "Clause 3",
+            "ClauseDescription__c": "This is Clause 3 description",
+            "Country__c": "USA",
+            "attributes": {"type": "AccountContractClause__c", "referenceId": "accContractClause3"}
+        },
+        {
+            "name": "Clause 4",
+            "ClauseDescription__c": "This is Clause 4 description",
+            "Country__c": "USA",
+            "attributes": {"type": "AccountContractClause__c", "referenceId": "accContractClause4"}
+        },
+        {
+            "name": "Clause 5",
+            "ClauseDescription__c": "This is Clause 5 description",
+            "Country__c": "USA",
+            "attributes": {"type": "AccountContractClause__c", "referenceId": "accContractClause5"}
+        },
+        {
+            "name": "Clause 6",
+            "ClauseDescription__c": "This is Clause 6 description",
+            "Country__c": "USA",
+            "attributes": {"type": "AccountContractClause__c", "referenceId": "accContractClause6"}
+        }
+    ]
+}

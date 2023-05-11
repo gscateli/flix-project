@@ -1,0 +1,14 @@
+[
+    {
+        "sobject": "Account",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": ["Accounts.json"]
+    },
+    {
+        "sobject": "AccountContractClause__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": ["AccountContractClauses.json"]
+    }
+]
